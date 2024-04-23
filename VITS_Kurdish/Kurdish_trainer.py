@@ -29,7 +29,7 @@ dataset_config = BaseDatasetConfig(
 )
 
 character_config=CharactersConfig(
-  characters='ء ا ب ت ث ج ح خ د ذ ر ز ژ س ش  ع غ ف ق ل م ن ه و ۆ ی ڕ چ ڕ گ ک پ ە ڤ ھ ێ ',
+  characters=' ي  ء ا ب ت ث ج ح خ د ذ ر ز ژ س ش  ع غ ف ق ل م ن ه و ۆ ی ڕ چ ڕ گ ک پ ە ڤ ھ ێ ك ڵ ئ',
 #   characters="!¡'(),-.:;¿?ABCDEFGHIJKLMNOPRSTUVWXYZabcdefghijklmnopqrstuvwxyzáçèéêëìíîïñòóôöùúûü«°±µ»$%&‘’‚“`”„",
   punctuations='!(),-.:;? ̠،؛؟‌<>',
   phonemes='ˈˌːˑpbtdʈɖcɟkɡqɢʔɴŋɲɳnɱmʙrʀⱱɾɽɸβfvθðszʃʒʂʐçʝxɣχʁħʕhɦɬɮʋɹɻjɰlɭʎʟaegiouwyɪʊ̩æɑɔəɚɛɝɨ̃ʉʌʍ0123456789"#$%*+/=ABCDEFGHIJKLMNOPRSTUVWXYZ[]^_{}',
