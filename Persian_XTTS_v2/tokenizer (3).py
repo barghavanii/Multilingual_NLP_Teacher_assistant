@@ -12,9 +12,9 @@ from spacy.lang.ar import Arabic
 from spacy.lang.en import English
 from spacy.lang.es import Spanish
 from spacy.lang.ja import Japanese
-from spacy.lang.fa import Persian
+from spacy.lang.zh import Chinese
 from tokenizers import Tokenizer
-from hazm import *
+from spacy.lang.fa import Persian
 
 from TTS.tts.layers.xtts.zh_num2words import TextNorm as zh_num2words
 
@@ -174,6 +174,7 @@ _abbreviations = {
             # There are not many common abbreviations in Arabic as in English.
         ]
     ],
+    
     "fa": [
         (re.compile("\\b%s\\." % x[0], re.IGNORECASE), x[1])
         for x in [
@@ -658,7 +659,7 @@ class VoiceBpeTokenizer:
             )
 
     def preprocess_text(self, txt, lang):
-        if lang in {"ar", "fa", "cs", "de", "en", "es", "fr", "hu", "it", "nl", "pl", "pt", "ru", "tr", "zh", "ko"}:
+        if lang in {"ar", "cs","fa", "de", "en", "es", "fr", "hu", "it", "nl", "pl", "pt", "ru", "tr", "zh", "ko"}:
             txt = multilingual_cleaners(txt, lang)
             if lang == "zh":
                 txt = chinese_transliterate(txt)
@@ -666,6 +667,9 @@ class VoiceBpeTokenizer:
                 txt = korean_transliterate(txt)
         elif lang == "ja":
             txt = japanese_cleaners(txt, self.katsu)
+        elif lang == "hi":
+            # @manmay will implement this
+            txt = basic_cleaners(txt)
         else:
             raise NotImplementedError(f"Language '{lang}' is not supported.")
         return txt
