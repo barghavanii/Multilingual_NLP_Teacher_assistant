@@ -24,7 +24,7 @@ from langchain.llms import OpenAI
 import os
 
 # Replace YOUR_OPENAI_API_KEY with your actual OpenAI API key
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "%API KEY"
 
 pdf_path= '/data/notebook_files/2301.02111.pdf'
 loader= PyPDFLoader(pdf_path)
